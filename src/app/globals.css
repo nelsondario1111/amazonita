@@ -24,7 +24,19 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display, serif);
 }
 
-/* Utility if you want to force the logo font anywhere */
+/* Typography mapping:
+   Primary: TAN Mon Cheri
+   Secondary: Anaktoria
+   Logo: Nomad Decorative
+*/
+.font-primary {
+  font-family: var(--font-display, serif);
+}
+
+.font-secondary {
+  font-family: var(--font-body, serif);
+}
+
 .font-logo {
   font-family: var(--font-logo, serif);
 }

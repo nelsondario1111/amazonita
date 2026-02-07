@@ -43,7 +43,9 @@ export default function Page() {
               <h1 className="mt-3 text-5xl font-semibold leading-[1.05]">
                 <span className="font-logo">LA AMAZONITA</span>{" "}
                 <span className="text-amazonita-turquoise">·</span>{" "}
-                <span className="text-amazonita-gold">Artist of Life</span>
+                <span className="font-secondary text-amazonita-gold">
+                  Artist of Life
+                </span>
               </h1>
 
               <p className="mt-5 max-w-xl text-black/70">

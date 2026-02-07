@@ -15,7 +15,7 @@ export const fontBody = localFont({
 export const fontDisplay = localFont({
   src: [
     {
-      path: "../fonts/tan-mon-cheri/TAN-MON CHERI-Regular.woff2",
+      path: "../fonts/TAN-Mon-Cheri/TAN-MON CHERI-Regular.woff2",
       weight: "400",
       style: "normal",
     },
@@ -27,7 +27,7 @@ export const fontDisplay = localFont({
 export const fontLogo = localFont({
   src: [
     {
-      path: "../fonts/nomad/Nomad.woff2",
+      path: "../fonts/Nomad/Nomad.woff2",
       weight: "400",
       style: "normal",
     },

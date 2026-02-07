@@ -43,6 +43,17 @@ h1, h2, h3, h4, h5, h6 {
   animation: orb-drift 9s ease-in-out infinite;
 }
 
+@media (max-width: 768px), (pointer: coarse) {
+  [data-reveal="true"] {
+    transition-duration: 520ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  .orb-drift {
+    display: none;
+  }
+}
+
 /* Optional: subtle glow for hero titles on dark sections */
 .text-glow {
   text-shadow: 0 0 18px rgba(244, 224, 137, 0.35);

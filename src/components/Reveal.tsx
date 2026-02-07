@@ -54,23 +54,24 @@ export default function Reveal({
     variant === "fade"
       ? "opacity-0"
       : variant === "down"
-        ? "opacity-0 -translate-y-8"
+        ? "opacity-0 -translate-y-3 md:-translate-y-8"
         : variant === "left"
-          ? "opacity-0 -translate-x-12 rotate-[-1.5deg]"
+          ? "opacity-0 -translate-x-3 md:-translate-x-12 md:rotate-[-1.5deg]"
           : variant === "right"
-            ? "opacity-0 translate-x-12 rotate-[1.5deg]"
+            ? "opacity-0 translate-x-3 md:translate-x-12 md:rotate-[1.5deg]"
             : variant === "zoom"
-              ? "opacity-0 scale-[0.92]"
+              ? "opacity-0 scale-[0.985] md:scale-[0.92]"
               : variant === "pop"
-                ? "opacity-0 translate-y-6 scale-[0.88]"
-                : "opacity-0 translate-y-8";
+                ? "opacity-0 translate-y-3 scale-[0.985] md:translate-y-6 md:scale-[0.88]"
+                : "opacity-0 translate-y-3 md:translate-y-8";
 
   return (
     <div
       ref={ref}
+      data-reveal="true"
       style={{ transitionDelay: `${delay}ms`, transitionDuration: `${duration}ms` }}
       className={[
-        "transform-gpu will-change-transform transition-[opacity,transform] ease-[cubic-bezier(0.2,0.8,0.2,1)] motion-reduce:transition-none motion-reduce:transform-none motion-reduce:opacity-100",
+        "transform-gpu md:will-change-transform transition-[opacity,transform] ease-[cubic-bezier(0.2,0.8,0.2,1)] motion-reduce:transition-none motion-reduce:transform-none motion-reduce:opacity-100",
         visible ? "opacity-100 translate-x-0 translate-y-0 scale-100 rotate-0" : hiddenState,
         className,
       ].join(" ")}

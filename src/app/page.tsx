@@ -1,6 +1,6 @@
 import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
-import ScrollReveal from "@/components/ScrollReveal";
+import Reveal from "@/components/Reveal";
 import { siteConfig } from "@/lib/site";
 
 function SectionTitle({
@@ -32,9 +32,9 @@ export default function Page() {
 
       <main id="inicio" className="mx-auto max-w-6xl scroll-mt-24 px-6">
         {/* HERO */}
-        <ScrollReveal>
-          <section className="py-14 scroll-mt-24">
-            <div className="grid items-center gap-10 md:grid-cols-2">
+        <section className="py-14 scroll-mt-24">
+          <div className="grid items-center gap-10 md:grid-cols-2">
+            <Reveal variant="fadeUp">
               <div>
                 <p className="text-xs uppercase tracking-[0.25em] text-black/60">
                   Bienestar • Oráculo • Arte
@@ -67,7 +67,9 @@ export default function Page() {
                   </a>
                 </div>
               </div>
+            </Reveal>
 
+            <Reveal variant="zoom" delay={90}>
               <div className="relative overflow-hidden rounded-[var(--radius-3xl)] bg-white shadow-[var(--shadow-soft)]">
                 {/* Replace with real hero image */}
                 <div className="relative aspect-[4/3]">
@@ -81,95 +83,95 @@ export default function Page() {
                 </div>
                 <div className="absolute inset-0 ring-1 ring-black/5" />
               </div>
-            </div>
-          </section>
-        </ScrollReveal>
+            </Reveal>
+          </div>
+        </section>
 
         {/* VALUES */}
-        <ScrollReveal>
-          <section className="py-14 scroll-mt-24">
+        <section className="py-14 scroll-mt-24">
+          <Reveal variant="fadeUp">
             <SectionTitle
               eyebrow="Valores"
               title="Sostenibilidad, Salud, Creatividad y Calidad"
               subtitle="La intención detrás de cada experiencia y cada pieza."
             />
+          </Reveal>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-4">
-              {[
-                { t: "Sostenibilidad", d: "Con respeto por la naturaleza y los materiales." },
-                { t: "Salud", d: "Bienestar físico, emocional y energético." },
-                { t: "Creatividad", d: "Arte, símbolos y belleza con propósito." },
-                { t: "Calidad", d: "Cuidado en cada detalle, con amor." },
-              ].map((c, index) => (
-                <ScrollReveal key={c.t} delay={index * 90}>
-                  <div className="rounded-[var(--radius-2xl)] bg-white p-6 shadow-[var(--shadow-soft)]">
-                    <div className="text-lg font-semibold">{c.t}</div>
-                    <p className="mt-2 text-sm text-black/70">{c.d}</p>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
-          </section>
-        </ScrollReveal>
+          <div className="mt-8 grid gap-4 md:grid-cols-4">
+            {[
+              { t: "Sostenibilidad", d: "Con respeto por la naturaleza y los materiales." },
+              { t: "Salud", d: "Bienestar físico, emocional y energético." },
+              { t: "Creatividad", d: "Arte, símbolos y belleza con propósito." },
+              { t: "Calidad", d: "Cuidado en cada detalle, con amor." },
+            ].map((c, index) => (
+              <Reveal key={c.t} variant="zoom" delay={index * 70}>
+                <div className="rounded-[var(--radius-2xl)] bg-white p-6 shadow-[var(--shadow-soft)]">
+                  <div className="text-lg font-semibold">{c.t}</div>
+                  <p className="mt-2 text-sm text-black/70">{c.d}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
 
         {/* SERVICES */}
-        <ScrollReveal>
-          <section id="servicios" className="py-14 scroll-mt-24">
+        <section id="servicios" className="py-14 scroll-mt-24">
+          <Reveal variant="fadeUp">
             <SectionTitle
               eyebrow="Servicios"
               title="Experiencias para el cuerpo y el alma"
               subtitle="Podemos ajustar la lista exacta cuando subas los detalles y fotos."
             />
+          </Reveal>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
-              {[
-                { t: "Masajes", d: "Relajación, liberación y equilibrio." },
-                { t: "Lecturas de Oráculo", d: "Claridad, guía y perspectiva." },
-                { t: "Regalos Artesanales", d: "Piezas con intención y belleza." },
-              ].map((s, index) => (
-                <ScrollReveal key={s.t} delay={index * 110}>
-                  <div className="rounded-[var(--radius-3xl)] bg-white p-7 shadow-[var(--shadow-soft)]">
-                    <div className="text-xl font-semibold">{s.t}</div>
-                    <p className="mt-2 text-black/70">{s.d}</p>
-                    <div className="mt-6 h-px w-full bg-black/10" />
-                    <p className="mt-4 text-sm text-black/60">
-                      (Aquí podemos añadir precio, duración y botón “Reservar”.)
-                    </p>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
-          </section>
-        </ScrollReveal>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {[
+              { t: "Masajes", d: "Relajación, liberación y equilibrio." },
+              { t: "Lecturas de Oráculo", d: "Claridad, guía y perspectiva." },
+              { t: "Regalos Artesanales", d: "Piezas con intención y belleza." },
+            ].map((s, index) => (
+              <Reveal key={s.t} variant="zoom" delay={index * 80}>
+                <div className="rounded-[var(--radius-3xl)] bg-white p-7 shadow-[var(--shadow-soft)]">
+                  <div className="text-xl font-semibold">{s.t}</div>
+                  <p className="mt-2 text-black/70">{s.d}</p>
+                  <div className="mt-6 h-px w-full bg-black/10" />
+                  <p className="mt-4 text-sm text-black/60">
+                    (Aquí podemos añadir precio, duración y botón “Reservar”.)
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
 
         {/* GALLERY */}
-        <ScrollReveal>
-          <section id="galeria" className="py-14 scroll-mt-24">
+        <section id="galeria" className="py-14 scroll-mt-24">
+          <Reveal variant="fadeUp">
             <SectionTitle
               eyebrow="Galería"
               title="Un vistazo al universo Amazonita"
               subtitle="Cuando subas más fotos, armamos una galería real con categorías."
             />
+          </Reveal>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
-              {[
-                { src: "/photos/g1.svg", alt: "Espacio de masaje preparado con luz cálida" },
-                { src: "/photos/g2.svg", alt: "Lectura de oráculo con cartas y velas" },
-                { src: "/photos/g3.svg", alt: "Regalo artesanal envuelto con detalles naturales" },
-              ].map((item, index) => (
-                <ScrollReveal key={item.src} delay={index * 120}>
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-3xl)] bg-white shadow-[var(--shadow-soft)]">
-                    <Image src={item.src} alt={item.alt} fill className="object-cover" />
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
-          </section>
-        </ScrollReveal>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {[
+              { src: "/photos/g1.svg", alt: "Espacio de masaje preparado con luz cálida" },
+              { src: "/photos/g2.svg", alt: "Lectura de oráculo con cartas y velas" },
+              { src: "/photos/g3.svg", alt: "Regalo artesanal envuelto con detalles naturales" },
+            ].map((item, index) => (
+              <Reveal key={item.src} variant="zoom" delay={index * 90}>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-3xl)] bg-white shadow-[var(--shadow-soft)]">
+                  <Image src={item.src} alt={item.alt} fill className="object-cover" />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
 
         {/* CONTACT */}
-        <ScrollReveal>
-          <section id="contacto" className="py-14 scroll-mt-24">
+        <section id="contacto" className="py-14 scroll-mt-24">
+          <Reveal variant="fadeUp" delay={20}>
             <div className="rounded-[var(--radius-3xl)] bg-white p-10 shadow-[var(--shadow-soft)]">
               <SectionTitle
                 eyebrow="Contacto"
@@ -199,14 +201,14 @@ export default function Page() {
                 *Reemplazamos email/WhatsApp cuando me pases los datos reales.
               </p>
             </div>
-          </section>
-        </ScrollReveal>
+          </Reveal>
+        </section>
 
-        <ScrollReveal>
+        <Reveal variant="fade" delay={60}>
           <footer className="py-10 text-center text-sm text-black/50">
             © {new Date().getFullYear()} {siteConfig.name} · {siteConfig.tagline}
           </footer>
-        </ScrollReveal>
+        </Reveal>
       </main>
     </>
   );

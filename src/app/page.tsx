@@ -2,6 +2,7 @@ import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
 import ParallaxLayer from "@/components/ParallaxLayer";
 import { siteConfig } from "@/lib/site";
+import { site } from "@/content/site";
 
 function SectionTitle({
   eyebrow,
@@ -91,7 +92,7 @@ export default function Page() {
         </section>
 
         {/* VALUES */}
-        <section className="py-14 scroll-mt-24">
+        <section id="nosotros" className="py-14 scroll-mt-24">
           <SectionTitle
             eyebrow="Valores"
             title="Sostenibilidad, Salud, Creatividad y Calidad"
@@ -113,6 +114,27 @@ export default function Page() {
                 <p className="mt-2 text-sm text-black/70">{c.d}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* MISSION & VISION */}
+        <section className="py-14 scroll-mt-24">
+          <SectionTitle
+            eyebrow="Nuestra esencia"
+            title="Misión y Visión"
+            subtitle="La dirección y propósito que guían cada experiencia en La Amazonita."
+          />
+
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            <div className="rounded-[var(--radius-3xl)] bg-white p-7 shadow-[var(--shadow-soft)] transition-transform duration-500 hover:-translate-y-2 hover:scale-[1.01]">
+              <h3 className="text-2xl font-semibold">Misión</h3>
+              <p className="mt-3 text-black/70">{site.mission}</p>
+            </div>
+
+            <div className="rounded-[var(--radius-3xl)] bg-white p-7 shadow-[var(--shadow-soft)] transition-transform duration-500 hover:-translate-y-2 hover:scale-[1.01]">
+              <h3 className="text-2xl font-semibold">Visión</h3>
+              <p className="mt-3 text-black/70">{site.vision}</p>
+            </div>
           </div>
         </section>
 

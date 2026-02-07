@@ -6,6 +6,7 @@ import { siteConfig } from "@/lib/site";
 
 const links = [
   { href: "#inicio", label: "Inicio" },
+  { href: "#nosotros", label: "Nosotros" },
   { href: "#servicios", label: "Servicios" },
   { href: "#galeria", label: "Galería" },
   { href: "#contacto", label: "Contacto" },

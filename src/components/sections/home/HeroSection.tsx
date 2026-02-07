@@ -19,7 +19,7 @@ export default function HeroSection() {
           <h1 className="mt-3 text-5xl font-semibold leading-[1.05]">
             <span className="font-logo uppercase">{site.brandName}</span>
           </h1>
-          <p className="mt-3 whitespace-nowrap text-5xl leading-[1.05] font-secondary text-amazonita-gold">
+          <p className="mt-3 whitespace-nowrap text-5xl leading-[1.05] font-secondary text-amazonita-deep-gold">
             {site.tagline}
           </p>
 

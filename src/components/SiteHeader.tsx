@@ -36,7 +36,7 @@ export default function SiteHeader() {
           </div>
           <div className="leading-tight">
             <div className="font-logo text-lg tracking-wide uppercase">{site.brandName}</div>
-            <div className="font-secondary text-xs text-black/60">{site.tagline}</div>
+            <div className="mt-1 font-secondary text-xs text-black/60 md:mt-0.5">{site.tagline}</div>
           </div>
         </a>
 

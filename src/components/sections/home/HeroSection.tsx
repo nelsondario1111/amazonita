@@ -17,12 +17,11 @@ export default function HeroSection() {
             {homeHero.eyebrow}
           </p>
           <h1 className="mt-3 text-5xl font-semibold leading-[1.05]">
-            <span className="font-logo uppercase">{site.brandName}</span>{" "}
-            <span className="text-amazonita-turquoise">·</span>{" "}
-            <span className="block whitespace-nowrap font-secondary text-amazonita-gold">
-              {site.tagline}
-            </span>
+            <span className="font-logo uppercase">{site.brandName}</span>
           </h1>
+          <p className="mt-3 whitespace-nowrap text-5xl leading-[1.05] font-secondary text-amazonita-gold">
+            {site.tagline}
+          </p>
 
           <p className="mt-5 max-w-xl text-black/70">{homeHero.description}</p>
 

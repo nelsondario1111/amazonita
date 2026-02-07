@@ -32,9 +32,11 @@ export default function Page() {
 
       <main id="inicio" className="mx-auto max-w-6xl scroll-mt-24 px-6">
         {/* HERO */}
-        <section className="py-14 scroll-mt-24">
+        <section className="relative overflow-hidden py-14 scroll-mt-24">
+          <div className="orb-drift pointer-events-none absolute -left-20 top-8 h-44 w-44 rounded-full bg-amazonita-gold/30 blur-3xl" />
+          <div className="orb-drift pointer-events-none absolute -right-24 top-20 h-56 w-56 rounded-full bg-amazonita-turquoise/25 blur-3xl [animation-delay:1200ms]" />
           <div className="grid items-center gap-10 md:grid-cols-2">
-            <Reveal variant="fadeUp">
+            <Reveal variant="left" duration={980}>
               <div>
                 <p className="text-xs uppercase tracking-[0.25em] text-black/60">
                   Bienestar • Oráculo • Arte
@@ -69,19 +71,20 @@ export default function Page() {
               </div>
             </Reveal>
 
-            <Reveal variant="zoom" delay={90}>
-              <div className="relative overflow-hidden rounded-[var(--radius-3xl)] bg-white shadow-[var(--shadow-soft)]">
+            <Reveal variant="right" delay={120} duration={1100}>
+              <div className="group relative overflow-hidden rounded-[var(--radius-3xl)] bg-white shadow-[var(--shadow-soft)]">
                 {/* Replace with real hero image */}
                 <div className="relative aspect-[4/3]">
                   <Image
                     src="/photos/hero.svg"
                     alt="La Amazonita"
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-[1600ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:scale-110 group-hover:rotate-[1deg]"
                     priority
                   />
                 </div>
                 <div className="absolute inset-0 ring-1 ring-black/5" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-amazonita-gold/15 opacity-80" />
               </div>
             </Reveal>
           </div>
@@ -89,7 +92,7 @@ export default function Page() {
 
         {/* VALUES */}
         <section className="py-14 scroll-mt-24">
-          <Reveal variant="fadeUp">
+          <Reveal variant="up" duration={980}>
             <SectionTitle
               eyebrow="Valores"
               title="Sostenibilidad, Salud, Creatividad y Calidad"
@@ -104,8 +107,13 @@ export default function Page() {
               { t: "Creatividad", d: "Arte, símbolos y belleza con propósito." },
               { t: "Calidad", d: "Cuidado en cada detalle, con amor." },
             ].map((c, index) => (
-              <Reveal key={c.t} variant="zoom" delay={index * 70}>
-                <div className="rounded-[var(--radius-2xl)] bg-white p-6 shadow-[var(--shadow-soft)]">
+              <Reveal
+                key={c.t}
+                variant={(["left", "up", "down", "right"] as const)[index % 4]}
+                delay={index * 90}
+                duration={950}
+              >
+                <div className="rounded-[var(--radius-2xl)] bg-white p-6 shadow-[var(--shadow-soft)] transition-transform duration-500 hover:-translate-y-2 hover:scale-[1.01]">
                   <div className="text-lg font-semibold">{c.t}</div>
                   <p className="mt-2 text-sm text-black/70">{c.d}</p>
                 </div>
@@ -116,7 +124,7 @@ export default function Page() {
 
         {/* SERVICES */}
         <section id="servicios" className="py-14 scroll-mt-24">
-          <Reveal variant="fadeUp">
+          <Reveal variant="up" duration={980}>
             <SectionTitle
               eyebrow="Servicios"
               title="Experiencias para el cuerpo y el alma"
@@ -130,8 +138,13 @@ export default function Page() {
               { t: "Lecturas de Oráculo", d: "Claridad, guía y perspectiva." },
               { t: "Regalos Artesanales", d: "Piezas con intención y belleza." },
             ].map((s, index) => (
-              <Reveal key={s.t} variant="zoom" delay={index * 80}>
-                <div className="rounded-[var(--radius-3xl)] bg-white p-7 shadow-[var(--shadow-soft)]">
+              <Reveal
+                key={s.t}
+                variant={(["left", "pop", "right"] as const)[index % 3]}
+                delay={index * 110}
+                duration={1000}
+              >
+                <div className="rounded-[var(--radius-3xl)] bg-white p-7 shadow-[var(--shadow-soft)] transition-transform duration-500 hover:-translate-y-2 hover:scale-[1.01]">
                   <div className="text-xl font-semibold">{s.t}</div>
                   <p className="mt-2 text-black/70">{s.d}</p>
                   <div className="mt-6 h-px w-full bg-black/10" />
@@ -145,8 +158,10 @@ export default function Page() {
         </section>
 
         {/* GALLERY */}
-        <section id="galeria" className="py-14 scroll-mt-24">
-          <Reveal variant="fadeUp">
+        <section id="galeria" className="relative overflow-hidden py-14 scroll-mt-24">
+          <div className="orb-drift pointer-events-none absolute -left-28 bottom-8 h-64 w-64 rounded-full bg-amazonita-turquoise/20 blur-3xl" />
+          <div className="orb-drift pointer-events-none absolute -right-20 top-10 h-52 w-52 rounded-full bg-amazonita-gold/35 blur-3xl [animation-delay:900ms]" />
+          <Reveal variant="up" duration={980}>
             <SectionTitle
               eyebrow="Galería"
               title="Un vistazo al universo Amazonita"
@@ -160,9 +175,20 @@ export default function Page() {
               { src: "/photos/g2.svg", alt: "Lectura de oráculo con cartas y velas" },
               { src: "/photos/g3.svg", alt: "Regalo artesanal envuelto con detalles naturales" },
             ].map((item, index) => (
-              <Reveal key={item.src} variant="zoom" delay={index * 90}>
-                <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-3xl)] bg-white shadow-[var(--shadow-soft)]">
-                  <Image src={item.src} alt={item.alt} fill className="object-cover" />
+              <Reveal
+                key={item.src}
+                variant={(["left", "pop", "right"] as const)[index % 3]}
+                delay={index * 120}
+                duration={1050}
+              >
+                <div className="group relative aspect-[4/3] overflow-hidden rounded-[var(--radius-3xl)] bg-white shadow-[var(--shadow-soft)]">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    className="object-cover transition-transform duration-[1500ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:scale-110 group-hover:rotate-[1.2deg]"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-55" />
                 </div>
               </Reveal>
             ))}
@@ -171,7 +197,7 @@ export default function Page() {
 
         {/* CONTACT */}
         <section id="contacto" className="py-14 scroll-mt-24">
-          <Reveal variant="fadeUp" delay={20}>
+          <Reveal variant="up" delay={20} duration={980}>
             <div className="rounded-[var(--radius-3xl)] bg-white p-10 shadow-[var(--shadow-soft)]">
               <SectionTitle
                 eyebrow="Contacto"
@@ -204,7 +230,7 @@ export default function Page() {
           </Reveal>
         </section>
 
-        <Reveal variant="fade" delay={60}>
+        <Reveal variant="fade" delay={60} duration={920}>
           <footer className="py-10 text-center text-sm text-black/50">
             © {new Date().getFullYear()} {siteConfig.name} · {siteConfig.tagline}
           </footer>

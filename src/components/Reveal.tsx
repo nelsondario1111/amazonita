@@ -10,17 +10,17 @@ type RevealProps = {
   duration?: number;
   once?: boolean;
   threshold?: number;
-  variant?: "fade" | "fadeUp" | "zoom";
+  variant?: "fade" | "up" | "down" | "left" | "right" | "zoom" | "pop";
 };
 
 export default function Reveal({
   children,
   className = "",
   delay = 0,
-  duration = 820,
+  duration = 900,
   once = true,
-  threshold = 0.16,
-  variant = "fadeUp",
+  threshold = 0.14,
+  variant = "up",
 }: RevealProps) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
@@ -53,17 +53,25 @@ export default function Reveal({
   const hiddenState =
     variant === "fade"
       ? "opacity-0"
-      : variant === "zoom"
-        ? "opacity-0 scale-[0.985]"
-        : "opacity-0 translate-y-4";
+      : variant === "down"
+        ? "opacity-0 -translate-y-8"
+        : variant === "left"
+          ? "opacity-0 -translate-x-12 rotate-[-1.5deg]"
+          : variant === "right"
+            ? "opacity-0 translate-x-12 rotate-[1.5deg]"
+            : variant === "zoom"
+              ? "opacity-0 scale-[0.92]"
+              : variant === "pop"
+                ? "opacity-0 translate-y-6 scale-[0.88]"
+                : "opacity-0 translate-y-8";
 
   return (
     <div
       ref={ref}
       style={{ transitionDelay: `${delay}ms`, transitionDuration: `${duration}ms` }}
       className={[
-        "transform-gpu will-change-transform transition-[opacity,transform] ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none motion-reduce:transform-none motion-reduce:opacity-100",
-        visible ? "opacity-100 translate-y-0 scale-100" : hiddenState,
+        "transform-gpu will-change-transform transition-[opacity,transform] ease-[cubic-bezier(0.2,0.8,0.2,1)] motion-reduce:transition-none motion-reduce:transform-none motion-reduce:opacity-100",
+        visible ? "opacity-100 translate-x-0 translate-y-0 scale-100 rotate-0" : hiddenState,
         className,
       ].join(" ")}
     >

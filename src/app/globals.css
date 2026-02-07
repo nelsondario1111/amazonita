@@ -29,6 +29,20 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-logo, serif);
 }
 
+@keyframes orb-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -16px, 0);
+  }
+}
+
+.orb-drift {
+  animation: orb-drift 9s ease-in-out infinite;
+}
+
 /* Optional: subtle glow for hero titles on dark sections */
 .text-glow {
   text-shadow: 0 0 18px rgba(244, 224, 137, 0.35);

@@ -41,7 +41,7 @@ export default function Page() {
                 Bienestar • Oráculo • Arte
               </p>
               <h1 className="mt-3 text-5xl font-semibold leading-[1.05]">
-                La Amazonita{" "}
+                LA AMAZONITA{" "}
                 <span className="text-amazonita-turquoise">·</span>{" "}
                 <span className="text-amazonita-gold">Artist of Life</span>
               </h1>

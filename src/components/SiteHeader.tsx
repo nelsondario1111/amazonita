@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useRef } from "react";
+import { site } from "@/content/site";
 import { siteConfig } from "@/lib/site";
 
 const links = [
@@ -34,8 +35,8 @@ export default function SiteHeader() {
             />
           </div>
           <div className="leading-tight">
-            <div className="font-logo text-lg tracking-wide uppercase">LA AMAZONITA</div>
-            <div className="font-secondary text-xs text-black/60">Artist of Life</div>
+            <div className="font-logo text-lg tracking-wide uppercase">{site.brandName}</div>
+            <div className="font-secondary text-xs text-black/60">{site.tagline}</div>
           </div>
         </a>
 

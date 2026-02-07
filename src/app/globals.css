@@ -43,14 +43,18 @@ h1, h2, h3, h4, h5, h6 {
   animation: orb-drift 9s ease-in-out infinite;
 }
 
-@media (max-width: 768px), (pointer: coarse) {
-  [data-reveal="true"] {
-    transition-duration: 520ms !important;
-    transition-delay: 0ms !important;
-  }
+.parallax-layer {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
 
+@media (max-width: 768px), (pointer: coarse) {
   .orb-drift {
     display: none;
+  }
+
+  .parallax-layer {
+    will-change: auto;
   }
 }
 

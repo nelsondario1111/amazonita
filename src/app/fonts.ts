@@ -27,7 +27,7 @@ export const fontDisplay = localFont({
 export const fontLogo = localFont({
   src: [
     {
-      path: "../fonts/Nomad/Nomad.woff2",
+      path: "../fonts/Nomad Decorative Regular.otf",
       weight: "400",
       style: "normal",
     },

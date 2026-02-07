@@ -41,7 +41,7 @@ export default function Page() {
                 Bienestar • Oráculo • Arte
               </p>
               <h1 className="mt-3 text-5xl font-semibold leading-[1.05]">
-                LA AMAZONITA{" "}
+                <span className="font-logo">LA AMAZONITA</span>{" "}
                 <span className="text-amazonita-turquoise">·</span>{" "}
                 <span className="text-amazonita-gold">Artist of Life</span>
               </h1>
@@ -208,7 +208,8 @@ export default function Page() {
         </section>
 
         <footer className="py-10 text-center text-sm text-black/50">
-          © {new Date().getFullYear()} {siteConfig.name} · {siteConfig.tagline}
+          © {new Date().getFullYear()} <span className="font-logo uppercase">LA AMAZONITA</span>{" "}
+          · {siteConfig.tagline}
         </footer>
       </main>
     </>

@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useRef } from "react";
 import { siteConfig } from "@/lib/site";
 
 const links = [
@@ -9,6 +12,12 @@ const links = [
 ];
 
 export default function SiteHeader() {
+  const mobileMenuRef = useRef<HTMLDetailsElement | null>(null);
+
+  const closeMobileMenu = () => {
+    mobileMenuRef.current?.removeAttribute("open");
+  };
+
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-amazonita-cream/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -41,7 +50,7 @@ export default function SiteHeader() {
           ))}
         </nav>
 
-        <details className="relative md:hidden">
+        <details ref={mobileMenuRef} className="relative md:hidden">
           <summary className="cursor-pointer list-none rounded-full border border-black/15 bg-white px-4 py-2 text-sm text-black/80">
             Menú
           </summary>
@@ -51,6 +60,7 @@ export default function SiteHeader() {
                 <a
                   key={l.href}
                   href={l.href}
+                  onClick={closeMobileMenu}
                   className="rounded-lg px-2 py-1 text-sm text-black/80 hover:bg-black/[0.03]"
                 >
                   {l.label}

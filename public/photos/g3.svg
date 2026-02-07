@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Galería 3</title>
+  <desc id="desc">Escena artesanal como marcador de posición.</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9f1e6"/>
+      <stop offset="100%" stop-color="#eee2d1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg3)"/>
+  <circle cx="210" cy="700" r="200" fill="#00ded3" opacity="0.2"/>
+  <circle cx="1020" cy="180" r="120" fill="#f4e089" opacity="0.45"/>
+  <rect x="300" y="220" width="600" height="460" rx="56" fill="#ffffff" opacity="0.75"/>
+</svg>

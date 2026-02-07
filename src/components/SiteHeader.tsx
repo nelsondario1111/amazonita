@@ -16,7 +16,7 @@ export default function SiteHeader() {
           <div className="relative h-10 w-10 overflow-hidden rounded-full bg-white shadow-[var(--shadow-soft)]">
             {/* replace src with your real logo asset */}
             <Image
-              src="/brand/mark.png"
+              src="/brand/mark.svg"
               alt="La Amazonita"
               fill
               className="object-cover"

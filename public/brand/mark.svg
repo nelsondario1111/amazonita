@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">La Amazonita Mark</title>
+  <desc id="desc">Símbolo circular con una gota turquesa y acento dorado.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0b0b"/>
+      <stop offset="100%" stop-color="#1b1b1b"/>
+    </linearGradient>
+    <linearGradient id="drop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ded3"/>
+      <stop offset="100%" stop-color="#00bcb3"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="64" fill="url(#bg)"/>
+  <circle cx="128" cy="128" r="86" fill="none" stroke="#f4e089" stroke-width="8" opacity="0.9"/>
+  <path d="M128 54c-24 29-43 55-43 82 0 24 19 44 43 44s43-20 43-44c0-27-19-53-43-82z" fill="url(#drop)"/>
+  <circle cx="148" cy="106" r="12" fill="#f4e089" opacity="0.9"/>
+</svg>

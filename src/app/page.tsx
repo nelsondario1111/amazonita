@@ -70,7 +70,7 @@ export default function Page() {
               {/* Replace with real hero image */}
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="/photos/hero.jpg"
+                  src="/photos/hero.svg"
                   alt="La Amazonita"
                   fill
                   className="object-cover"
@@ -147,9 +147,9 @@ export default function Page() {
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {[
-              { src: "/photos/g1.jpg", alt: "Espacio de masaje preparado con luz cálida" },
-              { src: "/photos/g2.jpg", alt: "Lectura de oráculo con cartas y velas" },
-              { src: "/photos/g3.jpg", alt: "Regalo artesanal envuelto con detalles naturales" },
+              { src: "/photos/g1.svg", alt: "Espacio de masaje preparado con luz cálida" },
+              { src: "/photos/g2.svg", alt: "Lectura de oráculo con cartas y velas" },
+              { src: "/photos/g3.svg", alt: "Regalo artesanal envuelto con detalles naturales" },
             ].map((item) => (
               <div
                 key={item.src}

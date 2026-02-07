@@ -12,26 +12,21 @@
   --radius-3xl: 2.25rem;
 
   --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.10);
-
-  /* Fonts (set by next/font/local in <html className="...">) */
-  --font-body: var(--font-body, serif);
-  --font-display: var(--font-display, serif);
-  --font-logo: var(--font-logo, serif);
 }
 
 body {
   background: var(--color-amazonita-cream);
   color: var(--color-amazonita-black);
-  font-family: var(--font-body);
+  font-family: var(--font-body, serif);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
+  font-family: var(--font-display, serif);
 }
 
 /* Utility if you want to force the logo font anywhere */
 .font-logo {
-  font-family: var(--font-logo);
+  font-family: var(--font-logo, serif);
 }
 
 /* Optional: subtle glow for hero titles on dark sections */

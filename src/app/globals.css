@@ -1,26 +1,37 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* La Amazonita tokens (Tailwind v4) */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-amazonita-turquoise: #00ded3;
+  --color-amazonita-gold: #f4e089;
+  --color-amazonita-cream: #f4eadb;
+  --color-amazonita-black: #0b0b0b;
+  --color-amazonita-white: #ffffff;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --radius-2xl: 1.75rem;
+  --radius-3xl: 2.25rem;
+
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.10);
+
+  --font-sans: var(
+    --font-geist-sans,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif
+  );
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-amazonita-cream);
+  color: var(--color-amazonita-black);
+  font-family: var(--font-sans);
+}
+
+/* Optional: subtle glow for hero titles on dark sections */
+.text-glow {
+  text-shadow: 0 0 18px rgba(244, 224, 137, 0.35);
 }

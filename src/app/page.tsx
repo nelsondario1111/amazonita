@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${siteConfig.siteUrl}/opengraph-image.png`,
+        url: siteConfig.openGraphImage,
         width: 1200,
         height: 630,
         alt: `Open Graph de ${site.brandName}`,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${site.brandName} | Bienestar y Oráculo en Tarapoto`,
     description: site.description,
-    images: [`${siteConfig.siteUrl}/opengraph-image.png`],
+    images: [siteConfig.openGraphImage],
   },
 };
 

@@ -1,7 +1,11 @@
 const whatsappNumber = "XXXXXXXXXXX";
+const defaultSiteUrl = "https://amazonita.vercel.app";
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? defaultSiteUrl).replace(/\/+$/, "");
+const openGraphImage = `${siteUrl}/opengraph-image.png`;
 
 export const siteConfig = {
-  siteUrl: "https://laamazonita.com",
+  siteUrl,
+  openGraphImage,
   email: "hello@laamazonita.com",
   whatsappNumber,
   whatsappLink: `https://wa.me/${whatsappNumber}`,

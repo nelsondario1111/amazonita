@@ -26,6 +26,20 @@ export const metadata: Metadata = {
     siteName: site.brandName,
     locale: site.locale,
     type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 315,
+        height: 310,
+        alt: `Logo de ${site.brandName}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.brandName} | Bienestar y Oráculo en Tarapoto`,
+    description: site.description,
+    images: ["/logo.png"],
   },
 };
 
@@ -36,7 +50,7 @@ export default function Page() {
     name: site.brandName,
     description: site.description,
     url: siteConfig.siteUrl,
-    image: `${siteConfig.siteUrl}/brand/mark.svg`,
+    image: `${siteConfig.siteUrl}/logo.png`,
     telephone: site.contact.phone,
     email: site.contact.email,
     address: {

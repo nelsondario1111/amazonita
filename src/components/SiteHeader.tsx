@@ -27,10 +27,9 @@ export default function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#inicio" className="flex items-center gap-3">
           <div className="relative h-10 w-10 overflow-hidden rounded-full bg-white shadow-[var(--shadow-soft)]">
-            {/* replace src with your real logo asset */}
             <Image
-              src="/brand/mark.svg"
-              alt="La Amazonita"
+              src="/logosmall.png"
+              alt="Logo de La Amazonita"
               fill
               className="object-cover"
               priority

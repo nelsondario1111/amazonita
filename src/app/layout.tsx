@@ -20,10 +20,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.png",
-        width: 315,
-        height: 310,
-        alt: `Logo de ${site.brandName}`,
+        url: `${siteConfig.siteUrl}/opengraph-image.png`,
+        width: 1200,
+        height: 630,
+        alt: `Open Graph de ${site.brandName}`,
       },
     ],
   },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${site.brandName} · ${site.tagline}`,
     description: site.description,
-    images: ["/logo.png"],
+    images: [`${siteConfig.siteUrl}/opengraph-image.png`],
   },
   icons: {
     icon: [

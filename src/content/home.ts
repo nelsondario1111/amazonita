@@ -93,7 +93,7 @@ const homeByLocale: Record<"es" | "en", HomeContent> = {
       primaryCtaLabel: "Reservar por WhatsApp",
       secondaryCtaLabel: "Ver servicios",
       secondaryCtaHref: "#servicios",
-      imageSrc: "/photos/hero.svg",
+      imageSrc: "/photos/hero.png",
       imageAlt: "La Amazonita",
     },
     valuesSection: {
@@ -226,7 +226,7 @@ const homeByLocale: Record<"es" | "en", HomeContent> = {
       primaryCtaLabel: "Book on WhatsApp",
       secondaryCtaLabel: "View services",
       secondaryCtaHref: "#services",
-      imageSrc: "/photos/hero.svg",
+      imageSrc: "/photos/hero.png",
       imageAlt: "La Amazonita",
     },
     valuesSection: {

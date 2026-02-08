@@ -1,10 +1,11 @@
+import Section from "@/components/ui/Section";
 import SectionTitle from "@/components/ui/SectionTitle";
 import SoftCard from "@/components/ui/SoftCard";
 import { homeValuesSection, values } from "@/content/home";
 
 export default function ValuesSection() {
   return (
-    <section id="nosotros" className="py-14 scroll-mt-24">
+    <Section id="nosotros">
       <SectionTitle
         eyebrow={homeValuesSection.eyebrow}
         title={homeValuesSection.title}
@@ -19,6 +20,6 @@ export default function ValuesSection() {
           </SoftCard>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }

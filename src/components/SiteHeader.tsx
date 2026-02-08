@@ -9,6 +9,8 @@ const links = [
   { href: "#inicio", label: "Inicio" },
   { href: "#nosotros", label: "Nosotros" },
   { href: "#servicios", label: "Servicios" },
+  { href: "#como-funciona", label: "Cómo Funciona" },
+  { href: "#horario", label: "Horario" },
   { href: "#galeria", label: "Galería" },
   { href: "#contacto", label: "Contacto" },
 ];
@@ -76,6 +78,7 @@ export default function SiteHeader() {
           href={siteConfig.whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Reservar por WhatsApp - La Amazonita"
           className="hidden items-center justify-center rounded-full bg-amazonita-turquoise px-5 py-2 text-sm font-medium text-black shadow-[var(--shadow-soft)] hover:opacity-90 md:inline-flex"
         >
           Reservar por WhatsApp

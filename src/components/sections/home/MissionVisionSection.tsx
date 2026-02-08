@@ -1,3 +1,4 @@
+import Section from "@/components/ui/Section";
 import SectionTitle from "@/components/ui/SectionTitle";
 import SoftCard from "@/components/ui/SoftCard";
 import { homeMissionVisionSection } from "@/content/home";
@@ -5,7 +6,7 @@ import { site } from "@/content/site";
 
 export default function MissionVisionSection() {
   return (
-    <section className="py-14 scroll-mt-24">
+    <Section>
       <SectionTitle
         eyebrow={homeMissionVisionSection.eyebrow}
         title={homeMissionVisionSection.title}
@@ -23,6 +24,6 @@ export default function MissionVisionSection() {
           <p className="mt-3 text-black/70">{site.vision}</p>
         </SoftCard>
       </div>
-    </section>
+    </Section>
   );
 }

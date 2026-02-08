@@ -11,3 +11,8 @@ export const siteConfig = {
     facebook: "#",
   },
 } as const;
+
+export function getWhatsAppLink(message?: string) {
+  if (!message) return siteConfig.whatsappLink;
+  return `${siteConfig.whatsappLink}?text=${encodeURIComponent(message)}`;
+}

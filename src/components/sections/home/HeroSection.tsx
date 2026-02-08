@@ -1,16 +1,20 @@
 import Image from "next/image";
+import Button from "@/components/Button";
 import ParallaxLayer from "@/components/ParallaxLayer";
-import Orb from "@/components/ui/Orb";
+import Section from "@/components/ui/Section";
 import { homeHero } from "@/content/home";
 import { site } from "@/content/site";
-import { siteConfig } from "@/lib/site";
+import { getWhatsAppLink } from "@/lib/site";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden py-14 scroll-mt-24">
-      <Orb className="-left-20 top-8 h-44 w-44 bg-amazonita-gold/30" />
-      <Orb className="-right-24 top-20 h-56 w-56 bg-amazonita-turquoise/25" delayMs={1200} />
-
+    <Section
+      overflowHidden
+      orbs={[
+        { className: "-left-20 top-8 h-44 w-44 bg-amazonita-gold/30" },
+        { className: "-right-24 top-20 h-56 w-56 bg-amazonita-turquoise/25", delayMs: 1200 },
+      ]}
+    >
       <div className="grid items-center gap-10 md:grid-cols-2">
         <div>
           <p className="text-xs uppercase tracking-[0.25em] text-black/60">
@@ -26,20 +30,17 @@ export default function HeroSection() {
           <p className="mt-5 max-w-xl text-black/70">{homeHero.description}</p>
 
           <div className="mt-7 flex flex-wrap gap-3">
-            <a
-              href={siteConfig.whatsappLink}
+            <Button
+              href={getWhatsAppLink("Hola, quiero reservar una experiencia en La Amazonita.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-amazonita-turquoise px-6 py-3 text-sm font-medium text-black shadow-[var(--shadow-soft)] hover:opacity-90"
+              ariaLabel="Reservar por WhatsApp - La Amazonita"
             >
               {homeHero.primaryCtaLabel}
-            </a>
-            <a
-              href={homeHero.secondaryCtaHref}
-              className="rounded-full border border-black/15 bg-white px-6 py-3 text-sm font-medium text-black hover:bg-black/[0.03]"
-            >
+            </Button>
+            <Button href={homeHero.secondaryCtaHref} variant="secondary" ariaLabel="Ver servicios de La Amazonita">
               {homeHero.secondaryCtaLabel}
-            </a>
+            </Button>
           </div>
         </div>
 
@@ -59,6 +60,6 @@ export default function HeroSection() {
           </div>
         </ParallaxLayer>
       </div>
-    </section>
+    </Section>
   );
 }

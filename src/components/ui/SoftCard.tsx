@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { cn } from "@/lib/cn";
 
 type SoftCardProps = {
   children: ReactNode;
@@ -19,7 +20,7 @@ export default function SoftCard({
     : "";
 
   return (
-    <div className={[radiusClass, "bg-white shadow-[var(--shadow-soft)]", liftClass, className].filter(Boolean).join(" ")}>
+    <div className={cn(radiusClass, "bg-white shadow-[var(--shadow-soft)]", liftClass, className)}>
       {children}
     </div>
   );
